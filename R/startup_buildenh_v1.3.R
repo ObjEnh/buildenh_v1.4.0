@@ -31,8 +31,10 @@ cat("first program/script 'startup_buildenh.R' ","\n")
 old_dir <- setwd("./")
 getwd()
 #
-home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3"
-home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3/R"
+#home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3"
+#home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3/R"
+home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3"
+home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3/R"
 ###################################################################################
 
 ## title of project (manual input of characteristics)
