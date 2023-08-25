@@ -214,7 +214,7 @@ plot(x,-y, pch=3, cex=1.3, cex.axis=1.3,cex.lab=1.3,col="red",
 
 #input of file with all buildings
 fname12 <- paste("./results/",Img_name,"/b_all.txt",sep="")
-b_all <- read.table(fname12, header = FALSE)
+b_all <- read.table(fname12, header = FALSE) #study contents of file
 b_all2 <- b_all
 
 if (length(b_all) >= 2 ) {
@@ -273,8 +273,8 @@ for (i in b_all_nr)  {
 ##plot of all processed buildings onto orthoimage
 setwd(OrgImgPathname)
 img_ref <- readImage(OrgImgFilename)
-#display(img_ref, method = "raster")
-display(img_ref, method = "browser") #for measurement of coordinates
+display(img_ref, method = "raster")
+#display(img_ref, method = "browser") #for measurement of coordinates
 
 #loop
 for (k in b_all_nr) {
