@@ -319,11 +319,10 @@ for (k in b_all_nr) {
 ################################################################################
 
 #6: plot of a selected corner on orthoimage (small scale)
-
+# to be used for checking of geometric accuracy
 setwd(OrgImgPathname)
 img_ref <- readImage(OrgImgFilename)
 display(img_ref, method = "raster")
-bnr2=7 #to be changed
 
 #loop
 for (k in b_all_nr) {
