@@ -118,7 +118,7 @@ shap1_A[,1] <- y
 shap1_A<-data.frame(shap1_A)
 shap1_A[,8:9] <- coor[,1:2]
 shap1_A[,10] <- coor[,5]
-shap2_A <- subset(shap1_A,shap1_A[,2] >= 3086) #removes buildings of area < 5mx5m (3086 pixels)
+shap2_A <- subset(shap1_A,shap1_A[,2] >= 3086) #removes buildings of area < 5mx5m (3086 pixels) or adapt to your case
 n8 <- nrow(shap2_A)
 cat('number of buildings after area-thresh-holding=',n8,'\n')
 rownames(shap2_A) <- 1:n8
