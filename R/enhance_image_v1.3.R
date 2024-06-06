@@ -24,10 +24,17 @@ setwd(OrgClassResPathname)
 LCM_b <-readImage(OrgClassResFilename)
 display(LCM_b) #display by "Viewer"
 
+##input of other classes
+#change OrgClassResFilename
+#succeed in a similar way as for buildings
+
 ##Generation of enhanced image 'LCM_b' (class building)
 kern=makeBrush(size,shape) #filtering
 LCMdilate=dilate(LCM_b,kern) #morphological operator dilate
-LCMdilaterode=erode(LCMdilate,kern) #morphological operator 'erode'
+LCMdilaterode=erode(LCMdilate,kern) #morphological operator 'erode' (='closing')
+print(LCMdilaterode)
+max(imageData(LCMdilaterode)) #new
+min(imageData(LCMdilaterode)) #new
 LCMdilaterode_gray <- channel(LCMdilaterode,'gray') #convert to gray image
 LCMdilaterode_t <- thresh(LCMdilaterode_gray,w,h,offset) #thresholding -> white oulines
 LCMdilaterode_t_f <- fillHull(LCMdilaterode_t) #fill with pixels of intensity 1 (white)
