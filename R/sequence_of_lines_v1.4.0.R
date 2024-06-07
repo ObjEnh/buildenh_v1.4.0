@@ -1,4 +1,5 @@
-#name of script: sequence_of_lines_v1.3.R 
+#name of script: sequence_of_lines.R
+cat("version_number= ",v_nr,"\n") 
 #description: program derives the sequence of line segments in polygons
 #author: Joachim Höhle
 #input: result of the Hough-transform
@@ -6,7 +7,7 @@
 #instructions: the method for sequence of lines is predicted by a Decision Tree
 #try another sek-method in case of failing
 #special objects may require correction which is carried out by additional scripts
-#use additional script: 'spObj_sequence_of_lines.R'
+#use additional script: 'spObj_sequence_of_lines_v1.4.0.R'
 #parameter 'p_pos' indicates the type of correction
 #GNU General Public License (GPL)
 ###############################################################################
