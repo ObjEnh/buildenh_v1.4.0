@@ -1,5 +1,5 @@
 ##plot of results on references (orthoimage,ground truth)
-##name of program (script): plot_results_on_references.R
+##name of script: plot_results_on_references.R
 cat("version_number= ",v_nr,"\n")
 ##author: Joachim Höhle
 ##examples: ISPRS data: image ISPRS7/LCM1, ISPRS1/LCM2
