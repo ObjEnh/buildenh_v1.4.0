@@ -1,4 +1,4 @@
-##name of script: spObj_line_detection_v1.3.R
+##name of script: spObj_line_detection_v1.4.0.R
 cat("version_number= ",v_nr,"\n")
 ##purpose: dealing with special objects in script 'line detection.R' 
 ##instructions: change of default values may be required
@@ -425,6 +425,6 @@ if (Img_name == "ISPRS1") {
   
 } #end of orthoimage "ISPRS1"
 
-##end of script 'spObj_line_detection_v1.3.R'
+##end of script 'spObj_line_detection_v1.4.0.R'
 
 
