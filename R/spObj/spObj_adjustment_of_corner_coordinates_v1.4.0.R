@@ -1,4 +1,5 @@
-##name of script: spObj_adjustment_of_corner_coordinates_v1.3.R
+##name of script: spObj_adjustment_of_corner_coordinates_v1.4.0.R
+#cat("version_number= ",v_nr,"\n")
 #author: Joachim Höhle
 #GNU General Public License (GPL)
 
@@ -92,4 +93,4 @@ if (Img_name == "ISPRS1") {
   
 } #end of orthoimage ISPRS1
 
-##end of script' spObj_adjustment_of_corner_coordinates_v1.3.R' 
+##end of script' spObj_adjustment_of_corner_coordinates_v1.4.0.R' 
