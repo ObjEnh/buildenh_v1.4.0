@@ -67,6 +67,6 @@ if (Img_name == "ISPRS1") {
   
 } #end of ISPRS1
 
-##end of script 'spObj_adjustment_of_line_v1.3.R' 
+##end of script 'spObj_adjustment_of_line_v1.4.0.R' 
 
 
