@@ -1,4 +1,4 @@
-## name of program: spObj_enhance_image_v1.3.R
+## name of program: spObj_enhance_image_v1.4.0.R
 # purpose: scaling of image 
 # ISPRS data "Vaihingen", area#7, area#1
 # author: Joachim Höhle
