@@ -1,4 +1,4 @@
-##name of script: spObj_sequence_of_lines_v1.3.R
+##name of script: spObj_sequence_of_lines_v1.4.0.R
 #purpose: dealing with special objects 
 #correction of position of line-centers, angle of line and sequence of lines 
 #instruction: if corrections in the positions are required -> use interactive 
@@ -370,5 +370,5 @@ if (Img_name == "ISPRS1") {
   
 } #end of ISPRS1
 
-##end of script 'spObj_sequence_of_lines_v1.3.R'
+##end of script 'spObj_sequence_of_lines_v1.4.0.R'
 ################################################################################
