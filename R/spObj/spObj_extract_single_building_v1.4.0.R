@@ -1,4 +1,4 @@
-##name of script: spObj_extract_single_building_v1.3.R
+##name of script: spObj_extract_single_building_v1.4.0.R
 #purpose: partition of special objects 
 #instruction: measure 2 pixels which will separate object (zoom:200%)
 #             use 'display(is_bnr)'
@@ -958,7 +958,7 @@ if (Img_name == "ISPRS1") {
 } #end ISPRS1
 ################################################################################
 
-cat("end of program 'spObj_extract_single_building_v1.3.R' ",sep = "","\n")
+cat("end of program 'spObj_extract_single_building_v1.4.0.R' ",sep = "","\n")
 
 ##
 
