@@ -1,4 +1,5 @@
-##name of script: 'spObj_intersect_corner_coordinates_v1.3.R'
+##name of script: 'spObj_intersect_corner_coordinates_v1.4.0.R'
+#cat("version_number= ",v_nr,"\n")
 #purpose: insert average angle for objects with non-orthogonal lines for special objects
 #author: Joachim Höhle
 #GNU General Public License (GPL)
@@ -72,4 +73,4 @@ if (Img_name == "ISPRS1") {
 } #end ISPRS1
 
 ################################################################################
-## end of spObj_intersect_corner_points_v1.3.R
+## end of spObj_intersect_corner_points_v1.4.0.R
