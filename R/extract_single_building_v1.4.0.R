@@ -21,12 +21,14 @@ if (answ == "1" && Img_name == "ISPRS7") { #processing of one example
   proc_mode <- "demo" #object b18 (ISPRS7)
   bnr2 <- 18
   part = "no_part"
+  k_part == "0"
 } 
 
 if (answ == "1" && Img_name == "ISPRS1") { #processing of one example
   proc_mode <- "demo" 
   bnr2 <- 11
   part = "no_part"
+  k_part = "0"
 }
 
 if (answ == "2") { 
@@ -245,7 +247,12 @@ display(b_new8, method="raster")
 ##partition of object?
 cat("partition of object? - no parts: 0, two parts: 1 (first object) or 2 (second object)","\n")
 
-k_part <- readline("select partition-type - if demo - type 0: ") #when object must be parted
+if (proc_mode == "demo") {
+  k_part = "0"
+  #"part = "no_part"
+} else {
+  k_part <- readline("type partition-type= ") #when object must be parted -> type 1 or 2  
+}
 
 if (k_part == "0") { #no partition of object
   part <- "no_part"
@@ -294,6 +301,7 @@ write.table(idxy, fname2,  sep= " ", row.names=T) ##output of pixel cluster for 
 cat("end of program 'extract_single_building.R' ","\n") 
 cat("continue with 'line_detection.R' ","\n")
 setwd(home_dir2)
+#stop("test")
 source(paste("line_detection_v",v_nr,".R", sep=""))
 ###################################################################################
 
