@@ -3,7 +3,7 @@ v_nr = "1.4.0" #version number of the program package
 cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""),"\n")
 #description: program(script) starts the package 'buildenh'
 #examples: extracted buildings from land cover maps derived by classification programs
-#data: ISPRS test "Vaihingen": orthoimage of areas #1, #7, (#26)
+#data: ISPRS test "Vaihingen": orthoimage of areas #1, #7 
 #author: Joachim Höhle
 #publication: Automated mapping of buildings through classification of DSM-based
 #ortho-images and cartographic enhancement, International Journal of Applied Earth
@@ -15,12 +15,12 @@ cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""
 #instructions: select orthoimage 
 #instructions: select the OrgClassResFilename,OrgImgPathname,OrgImgFilename,OrgGtsPathname,OrgGtsFilename   
 #instructions: type 'Ctrl+A'(select all) and 'Source'
-#instructions: display all 4 Panes
+#instructions: display all 4 panes
 #instructions: new users may start by examples (processing mode = demo)
 #instructions: The parameters (bnr, p_m_md, part, ro_rg, ref_l, cas, n_pix, c_ld, sek, c_pos, c_sek, 
 #c_adj_l) must be selected. The used parameters in the example can be found in a table stored at './data'.
 #instructions: find supporting software at './R/support'
-#depends: R 4.2.1; BiocManager 1.78.0-0 (EBImage); spatstat 2.3-4; tiff 01-11; rpart 4.1.19; nlme 3.1-162;
+#depends: R 4.4.0; BiocManager 1.78.0-0 (EBImage); spatstat 2.3-4; tiff 01-11; rpart 4.1.19; nlme 3.1-162;
 #Copyright(C) 2022 Joachim Höhle
 #GNU General Public License (GPL)
 
@@ -31,10 +31,11 @@ getwd()
 #
 #home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3"
 #home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3/R"
-home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3"
-home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3/R"
+#home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3"
+#home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3/R"
+home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0"
+home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0/R"
 ###################################################################################
-
 ## title of project (manual input of characteristics)
 prj_title <- "ISPRS1_LCM2" #example#2
 #orthoimage ISPRS1 
@@ -148,6 +149,7 @@ cat("end of 'startup_buildenh.R' - continue with 'enhance_image.R' ", "\n")
 
 ##start the next program ("enhance_image.R")
 setwd(home_dir2)
+#stop("test")
 source(paste("enhance_image_v",v_nr,".R",sep=""))
 #
 
