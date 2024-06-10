@@ -92,7 +92,7 @@ display(LCM_b_2)
 
 cat("end of 'enhance_image.R' - continue with 'extract_single_building.R' ","\n")
 setwd(home_dir2)
-stop("test")
+#stop("test")
 source(paste("extract_single_building_v",v_nr,".R",sep=""))
 #end of 'enhance_image'
 #########################################################################################
