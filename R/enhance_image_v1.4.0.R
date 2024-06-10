@@ -1,13 +1,13 @@
 ##name of program (script): enhance_image.R
 cat("version_number= ",v_nr,"\n")
 #description: cartographic enhancement of extracted class "building"
-#ISPRS data (areas #1,#7), DT classification, training by ISPRS orthoimages #26
 #author: Joachim Höhle
-#instructions: scale of image has to be checked and eventually be corrected
+#instructions: scale of image has to be checked and eventually to be corrected
 #GNU General Public License (GPL)
-############################################################################
+##############################################################################
 
 cat("start of program 'enhance_image.R' ", "\n")
+cat("Image name: ",Img_name,"\n")
 
 ##parameters: size of brush [pixels]
 size <- 5 #used in makeBrush
@@ -33,9 +33,9 @@ kern=makeBrush(size,shape) #filtering
 LCMdilate=dilate(LCM_b,kern) #morphological operator dilate
 LCMdilaterode=erode(LCMdilate,kern) #morphological operator 'erode' (='closing')
 print(LCMdilaterode)
-max(imageData(LCMdilaterode)) #new
-min(imageData(LCMdilaterode)) #new
 LCMdilaterode_gray <- channel(LCMdilaterode,'gray') #convert to gray image
+max(imageData(LCMdilaterode)) 
+min(imageData(LCMdilaterode)) 
 LCMdilaterode_t <- thresh(LCMdilaterode_gray,w,h,offset) #thresholding -> white oulines
 LCMdilaterode_t_f <- fillHull(LCMdilaterode_t) #fill with pixels of intensity 1 (white)
 LCMdilaterode_t_f_lab <-  bwlabel(LCMdilaterode_t_f) #segmentation by labeling
@@ -92,6 +92,7 @@ display(LCM_b_2)
 
 cat("end of 'enhance_image.R' - continue with 'extract_single_building.R' ","\n")
 setwd(home_dir2)
+stop("test")
 source(paste("extract_single_building_v",v_nr,".R",sep=""))
 #end of 'enhance_image'
 #########################################################################################
