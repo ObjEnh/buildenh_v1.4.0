@@ -300,7 +300,7 @@ write.table(idxy, fname2,  sep= " ", row.names=T) ##output of pixel cluster for 
 cat("end of program 'extract_single_building.R' ","\n") 
 cat("continue with 'line_detection.R' ","\n")
 setwd(home_dir2)
-#stop("test")
+stop("test")
 source(paste("line_detection_v",v_nr,".R", sep=""))
 ###################################################################################
 
