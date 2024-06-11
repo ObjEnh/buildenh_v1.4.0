@@ -122,10 +122,6 @@ if (Img_name == "ISPRS1" & proc_mode == "demo") {
   }  
 }
 
-#if (Img_name == "ISPRS1") {
-#  cat("if demo -> select 3", "\n")  
-#}
-
 if (Img_name == "ISPRS7" & proc_mode == "demo") {
   ro_rg = 1
 } else {
@@ -135,8 +131,6 @@ if (Img_name == "ISPRS7" & proc_mode == "demo") {
   }  
 }
 
-#ro_rg <- readline("select ro_range: ")
-#ro_rg <- as.integer(ro_rg)
 cat("selected ro-range =", ro_rg,"\n")
 
 #
@@ -2108,7 +2102,7 @@ all_PC
 cat("end of program 'line-detection.R' - continue with 'sequence_of_lines.R' ","\n")
 
 setwd(home_dir2)
-stop("test")
+#stop("test")
 source(paste("sequence_of_lines_v",v_nr,".R",sep=""))
 ######################################################################################
 
