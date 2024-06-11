@@ -116,8 +116,10 @@ ro_rg=3: range with -Dis_max...Dis_max (default ISPRS1) ")
 if (Img_name == "ISPRS1" & proc_mode == "demo") {
   ro_rg = 3
 } else {
-  ro_rg <- readline("select ro_range: ") #type 1 or 2 or 3
-  ro_rg <- as.integer(ro_rg)
+  if (Img_name == "ISPRS1" & proc_mode == "demo") {
+    ro_rg <- readline("select ro_range: ") #type 1 or 2 or 3
+    ro_rg <- as.integer(ro_rg)
+  }  
 }
 
 #if (Img_name == "ISPRS1") {
@@ -127,8 +129,10 @@ if (Img_name == "ISPRS1" & proc_mode == "demo") {
 if (Img_name == "ISPRS7" & proc_mode == "demo") {
   ro_rg = 1
 } else {
-  ro_rg <- readline("select ro_range: ") #type 1 or 2 or 3
-  ro_rg <- as.integer(ro_rg)
+  if (Img_name == "ISPRS7" & proc_mode == "demo") {
+    ro_rg <- readline("select ro_range: ") #type 1 or 2 or 3
+    ro_rg <- as.integer(ro_rg)
+  }  
 }
 
 #ro_rg <- readline("select ro_range: ")
@@ -490,24 +494,25 @@ for (n1 in vec) {
 ## selection of line as reference line (ref-line for orientation/angle)
 # consider manual determination of ref-line (see: support_line_detection.R)
 
-if (Img_name == "ISPRS7" && proc_mode == "demo") {
+if (Img_name == "ISPRS7" & proc_mode == "demo") {
   #cat("if demo -> type 1", "\n")
   lnr=1
 } else {
-  lnr <- readline("type reference line number: ") 
-  lnr <- as.integer(lnr)
+  if (Img_name == "ISPRS7" & proc_mode == "demo") {
+    lnr <- readline("type reference line number: ") 
+    lnr <- as.integer(lnr)
+  }  
 }
 
-if (Img_name == "ISPRS1" && proc_mode == "demo") { 
-  #cat("if demo -> type 2", "\n")
+if (Img_name == "ISPRS1" & proc_mode == "demo") { 
   lnr=2
 } else {
-  lnr <- readline("type reference line number: ") 
-  lnr <- as.integer(lnr)
+  if (Img_name == "ISPRS1" & proc_mode == "demo") { 
+    lnr <- readline("type reference line number: ") 
+    lnr <- as.integer(lnr)
+  }  
 }
 
-#lnr <- readline("type reference line number: ") 
-#lnr <- as.integer(lnr)
 lnr_ref <- lnr
 theta_ref_ind <- B4[lnr,2] 
 
@@ -2103,7 +2108,7 @@ all_PC
 cat("end of program 'line-detection.R' - continue with 'sequence_of_lines.R' ","\n")
 
 setwd(home_dir2)
-stop("test")
+#stop("test")
 source(paste("sequence_of_lines_v",v_nr,".R",sep=""))
 ######################################################################################
 
