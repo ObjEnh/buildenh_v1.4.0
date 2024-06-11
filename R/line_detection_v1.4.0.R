@@ -913,11 +913,11 @@ if (ty == 0) {
 }
 
 if (proc_mode == "demo") { 
-  cat("if demo (ISPRS1,ISPRS7) - type 4", "\n")
+  ty=4
+} else {
+  ty <- readline("type object type= ") #manual input
+  ty <- as.integer(ty)
 }
-
-ty <- readline("type object type= ") #manual input
-ty <- as.integer(ty)
 cas <- switch(ty,"extr_wd", "4_long", "100_all", "100_all+nonortho")
 cat("case= ", cas, "\n")
 ###############################################################
@@ -2108,7 +2108,7 @@ all_PC
 cat("end of program 'line-detection.R' - continue with 'sequence_of_lines.R' ","\n")
 
 setwd(home_dir2)
-#stop("test")
+stop("test")
 source(paste("sequence_of_lines_v",v_nr,".R",sep=""))
 ######################################################################################
 
