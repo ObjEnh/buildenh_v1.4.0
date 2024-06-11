@@ -80,17 +80,17 @@ pred4 <- as.numeric(pred3)
 cat("suggested (predicted) method (meth) for determination of line-sequence_DT= ", pred4,"\n")
 cat("1: Mpts(midpoints+angle), 2: Mpts+dist(midpoints+distance), 3: bdr_follow (boundry following)","\n")
 
-if (Img_name == "ISPRS1" && proc_mode == "demo") {
-  cat("if demo - type 3", "\n")
-}
-
-if (Img_name == "ISPRS7" && proc_mode == "demo") {
-  cat("if demo - type 3", "\n")
+if (Img_name == "ISPRS1" & proc_mode == "demo" |
+    Img_name == "ISPRS7" & proc_mode == "demo") {
+  meth <- 3
+} else {
+  meth <- readline("type number for method for determination of line-sequence: ")
+  meth <- as.numeric(meth)
 }
 
 #manual input of method
-meth <- readline("type number for method for determination of line-sequence: ")
-meth <- as.numeric(meth)
+#meth <- readline("type number for method for determination of line-sequence: ")
+#meth <- as.numeric(meth)
 sek <- switch(meth,"Mpts","Mpts+dist","bdr_follow") 
 sek #selected method for determination of line-sequence
 
@@ -607,7 +607,7 @@ if (sek == "bdr_follow") {
   bnr2 <- bnr2_orig
   b_new <- readImage(paste("./data/",Img_name,"/images/b",bnr2,"_new8.tif",sep = ""))
   display(b_new,"raster")
-  #display(b_new,"browser")
+  display(b_new,"browser")
   colorMode(b_new) <- Grayscale
   b_bin <- b_new[,,1]
   b <- b_bin@.Data
@@ -644,7 +644,7 @@ if (sek == "bdr_follow") {
   ##transfer of midpoints into system of image 'out_poly'
   #automatic determination of scale factor my3
   par(mai = c(1.02,0.82,0.82,0.42))
-  pixel_size <- par("mai")[3]/60 #60 pixel, 
+  pixel_size <- par("mai")[3]/60 #60 pixel
   #determined by manual measurement of top margin (0.82") 
   #using function 'locator(1)'
   pixel_size # unit is inch, corresponds to 73.17073 pixels 
@@ -735,15 +735,19 @@ if (sek == "bdr_follow") {
   b13_angle_df 
   cat("is the position of all midpoints correct?","\n")
   
-  if (Img_name == "ISPRS1" && proc_mode == "demo") {
-    cat("if demo -> type N", "\n")
+  if (Img_name == "ISPRS1" && proc_mode == "demo" |
+      Img_name == "ISPRS7" && proc_mode == "demo") {
+      cat("if demo -> answer is: N", "\n")
+      answ = "N"
+  } else {
+    answ <- readline("type Y or N:  ") #manual input
   }
   
-  if (Img_name == "ISPRS7" && proc_mode == "demo") {
-    cat("if demo - type N", "\n")
-  }
+  #if (Img_name == "ISPRS7" && proc_mode == "demo") {
+  #  cat("if demo - type N", "\n")
+  #}
   
-  answ <- readline("type Y or N:  ") #manual input
+  #answ <- readline("type Y or N:  ") #manual input
   
   if (substr(bnr2,3,3) == "1") {
     part <- "2parts_1"
@@ -1126,7 +1130,7 @@ all_PC
 #
 cat("end of 'sequence of lines.R' - continue with 'adjustment_of_line.R' ","\n")
 cat("####################################################################","\n")
-
+stop("test")
 setwd(home_dir2)
 source(paste("adjustment_of_line_v",v_nr,".R",sep=""))
 
