@@ -116,7 +116,7 @@ ro_rg=3: range with -Dis_max...Dis_max (default ISPRS1) ")
 if (Img_name == "ISPRS1" & proc_mode == "demo") {
   ro_rg = 3
 } else {
-  ro_rg <- readline("select ro_range: ")
+  ro_rg <- readline("select ro_range: ") #type 1 or 2 or 3
   ro_rg <- as.integer(ro_rg)
 }
 
@@ -124,11 +124,10 @@ if (Img_name == "ISPRS1" & proc_mode == "demo") {
 #  cat("if demo -> select 3", "\n")  
 #}
 
-if (Img_name == "ISPRS7" && proc_mode == "demo") {
-  #cat("if demo -> select 1", "\n")
-  ro_rg=1
+if (Img_name == "ISPRS7" & proc_mode == "demo") {
+  ro_rg = 1
 } else {
-  ro_rg <- readline("select ro_range: ")
+  ro_rg <- readline("select ro_range: ") #type 1 or 2 or 3
   ro_rg <- as.integer(ro_rg)
 }
 
