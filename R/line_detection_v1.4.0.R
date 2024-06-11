@@ -110,12 +110,11 @@ n_theta <- length(theta)
 cat("ro_rg=0: range with Dis_min...Dis_max
 ro_rg=1: range with 0...Dis_max (default for ISPRS7)
 ro_rg=2: range calculated with angle between main axis of ellipse and x-axis (math. definition) 
-ro_rg=3: range with -Dis_max...Dis_max (default ISPRS1) 
-")
+ro_rg=3: range with -Dis_max...Dis_max (default ISPRS1) ")
 
 #setting of ro_range
 if (Img_name == "ISPRS1" && proc_mode == "demo") {
-  ro_rg=3
+  ro_rg = 3
 } else {
   ro_rg <- readline("select ro_range: ")
   ro_rg <- as.integer(ro_rg)
