@@ -3,14 +3,14 @@ cat("version_number= ",v_nr,"\n")
 #description: separation of pixel clusters (PC) representing line segments 
 #detecting of lines representing the selected object
 #author: Joachim Höhle
-#examples: ISPRS dataset 'Vaihingen', orthoimages #1, #7, (#26)
+#examples: ISPRS dataset 'Vaihingen', orthoimages #1, #7
 #instructions: check the ro-range and the main direction of object
 #the minimum lengths of the lines to be detected are defined by a default value (n_pix) 
 #the default value (n_pix) may be adapted to the existing objects of the orthoimage
 #use 'Zoom' for evaluation of position
 #change eventually the default value for each object type ("extr_wd", "4_long", "100_all", "100_all+nonortho")
 #if lines of other orientation than the main orientation are part of the object then specify their labels
-#use scripts #8 and #9 of 'support_line_detection' 
+#use scripts #8 and #9 of 'support_line_detection.R' 
 #GNU General Public License (GPL)
 cat("#########################################################################","\n")
 
@@ -114,16 +114,27 @@ ro_rg=3: range with -Dis_max...Dis_max (default ISPRS1)
 ")
 
 #setting of ro_range
-if (Img_name == "ISPRS1") {
-  cat("if demo -> select 3", "\n")  
+if (Img_name == "ISPRS1" && proc_mode == "demo") {
+  ro_rg=3
+} else {
+  ro_rg <- readline("select ro_range: ")
+  ro_rg <- as.integer(ro_rg)
 }
 
-if (Img_name == "ISPRS7") {
-  cat("if demo -> select 1", "\n")  
+#if (Img_name == "ISPRS1") {
+#  cat("if demo -> select 3", "\n")  
+#}
+
+if (Img_name == "ISPRS7" && proc_mode == "demo") {
+  #cat("if demo -> select 1", "\n")
+  ro_rg=1
+} else {
+  ro_rg <- readline("select ro_range: ")
+  ro_rg <- as.integer(ro_rg)
 }
 
-ro_rg <- readline("select ro_range: ")
-ro_rg <- as.integer(ro_rg)
+#ro_rg <- readline("select ro_range: ")
+#ro_rg <- as.integer(ro_rg)
 cat("selected ro-range =", ro_rg,"\n")
 
 #
@@ -482,15 +493,23 @@ for (n1 in vec) {
 # consider manual determination of ref-line (see: support_line_detection.R)
 
 if (Img_name == "ISPRS7" && proc_mode == "demo") {
-  cat("if demo -> type 1", "\n")
+  #cat("if demo -> type 1", "\n")
+  lnr=1
+} else {
+  lnr <- readline("type reference line number: ") 
+  lnr <- as.integer(lnr)
 }
 
 if (Img_name == "ISPRS1" && proc_mode == "demo") { 
-  cat("if demo -> type 2", "\n")
-} 
+  #cat("if demo -> type 2", "\n")
+  lnr=2
+} else {
+  lnr <- readline("type reference line number: ") 
+  lnr <- as.integer(lnr)
+}
 
-lnr <- readline("type reference line number: ") 
-lnr <- as.integer(lnr)
+#lnr <- readline("type reference line number: ") 
+#lnr <- as.integer(lnr)
 lnr_ref <- lnr
 theta_ref_ind <- B4[lnr,2] 
 
@@ -2086,6 +2105,7 @@ all_PC
 cat("end of program 'line-detection.R' - continue with 'sequence_of_lines.R' ","\n")
 
 setwd(home_dir2)
+stop("test")
 source(paste("sequence_of_lines_v",v_nr,".R",sep=""))
 ######################################################################################
 
