@@ -249,7 +249,6 @@ cat("partition of object? - no parts: 0, two parts: 1 (first object) or 2 (secon
 
 if (proc_mode == "demo") {
   k_part = "0"
-  #"part = "no_part"
 } else {
   k_part <- readline("type partition-type= ") #when object must be parted -> type 1 or 2  
 }
