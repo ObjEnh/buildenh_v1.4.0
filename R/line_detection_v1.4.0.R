@@ -113,7 +113,7 @@ ro_rg=2: range calculated with angle between main axis of ellipse and x-axis (ma
 ro_rg=3: range with -Dis_max...Dis_max (default ISPRS1) ")
 
 #setting of ro_range
-if (Img_name == "ISPRS1" && proc_mode == "demo") {
+if (Img_name == "ISPRS1" & proc_mode == "demo") {
   ro_rg = 3
 } else {
   ro_rg <- readline("select ro_range: ")
