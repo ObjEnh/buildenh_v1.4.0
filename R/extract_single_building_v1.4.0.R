@@ -21,7 +21,7 @@ if (answ == "1" && Img_name == "ISPRS7") { #processing of one example
   proc_mode <- "demo" #object b18 (ISPRS7)
   bnr2 <- 18
   part = "no_part"
-  k_part == "0"
+  k_part = "0"
 } 
 
 if (answ == "1" && Img_name == "ISPRS1") { #processing of one example
