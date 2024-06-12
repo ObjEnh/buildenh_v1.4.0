@@ -14,6 +14,12 @@ if (Img_name == "ISPRS7") {
     theta_av2_mod
   } #end if
   
+  #b18
+  if (bnr2==18 && p_pos == "cor_theta_av2") { 
+    theta_av2_mod <- 29.8886 #manual calculation by script 'support_intersect_corner_points', script #4
+    theta_av2_mod
+  } #end if
+  
   #b34
   if (bnr2==34 && p_pos == "cor_theta_av2") { 
     theta_av2_mod <- 29.9641 #manual calculation by script 'support_intersect_corner_points', script #4
