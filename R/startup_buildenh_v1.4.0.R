@@ -64,9 +64,9 @@ cat("project title is = ", prj_title,"\n")
 setwd(home_dir)
 
 #select orthoimage (activate manually)
-Img_name <- "ISPRS1" #name of orthoimage to be processed (example2)
+#Img_name <- "ISPRS1" #name of orthoimage to be processed (example2)
 #Img_name <- readline("type name of orthoimage: ") #line can be avoided when Img_name is selected
-#Img_name <- "ISPRS7" #name of orthoimage to be processed (example1)
+Img_name <- "ISPRS7" #name of orthoimage to be processed (example1)
 #Img_name <- "NN" #name of orthoimage to be processed (orthoimage of your project)
 
 if (Img_name == "ISPRS1") { #example2
