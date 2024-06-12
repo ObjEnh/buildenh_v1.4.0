@@ -1128,7 +1128,6 @@ all_PC
 #
 cat("end of 'sequence of lines.R' - continue with 'adjustment_of_line.R' ","\n")
 cat("####################################################################","\n")
-stop("test")
 setwd(home_dir2)
 #stop("test")
 source(paste("adjustment_of_line_v",v_nr,".R",sep=""))
