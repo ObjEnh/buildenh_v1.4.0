@@ -343,10 +343,13 @@ for (i in y2) {
 } #end for-loop
 
 print(B6)
-
 cat("is adjustment of lines correct?", "\n")
-cat("if proc_mode='demo' -> type Y", "\n")
-answ4 <- readline("type Y or N: ") #interaction required
+
+if (proc_mode == "demo") {
+  answ4 = "Y" 
+} else {
+  answ4 <- readline("type Y or N: ") #interaction required  
+}
 
 if (answ4 == "N") {
   p_pos <- "cor_adj_line" #correction of adjustment parameter
@@ -366,6 +369,7 @@ cat("end of 'adjustment_of_line.r'","\n")
 
 cat("continue with 'intersect_corner_points.R'","\n")
 setwd(home_dir2)
+#stop("test")
 source(paste("intersect_corner_points_v",v_nr,".R",sep=""))
 ################################################################################
 
