@@ -105,7 +105,7 @@ if (cas == "extr_wd" || cas == "4_long" || cas == "100_all" || cas == "100_all+n
   } #end for-loop
   #end of plot at large scale 
   
-  cat("does the result agree with the orthoimage?","\n")
+  cat("does the result agree with the orthoimage (large scale) ?","\n")
   
   if (proc_mode == "demo") {
     cat("if demo - type Y ","\n")
@@ -142,13 +142,13 @@ if (cas == "extr_wd" || cas == "4_long" || cas == "100_all" || cas == "100_all+n
     lines(b2, col="white", asp=1, type="l", lwd=2, lty=1)
   } #end while
 
-  cat("does the result agree with the orthoimage?","\n")
+  cat("does the result agree with the orthoimage (small scale) ?","\n")
   
-  if (proc_mode == "demo") {
-    cat("if demo - type Y ","\n")
+  if (proc_mode == "demo") { 
+    answ = "Y" #automated
+  } else {
+    answ <- readline ("type Y or N: ") #interaction required
   }
-  
-  answ <- readline ("type Y or N: ")
   
   if (answ == "N") {
     cat ("start again with this object and select other values for 'cas' and/or 'sek' ","\n")
