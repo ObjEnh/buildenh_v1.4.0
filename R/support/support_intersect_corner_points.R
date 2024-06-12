@@ -165,14 +165,17 @@ cat("theta_average2= ",theta_average2,"degrees","\n")
 
 #input
 
+#example: b18 (ISPRS7)
+ang1 <- c(30.033,29.716) #theta angles (must be adapted)
+len1 <- c(313,262) #length of lines
+theta_average2 <- w_av(ang1,len1)
+#end 
+
 #example: b34 (ISPRS7)
 ang1 <- c((119.2636-90),30.2372) #theta angles (must be adapted)
 len1 <- c(62,159) #length of lines
 theta_average <- w_av(ang1,len1)
 
-ang1 <- c((161.7411-90),70.0149,72.7405) #theta angles (must be adapted)
-len1 <- c(176,56,28) #length of lines
-theta_average2 <- w_av(ang1,len1)
 #end of script 4 (manual generation of theta average)
 ###############################################################################
 
