@@ -234,6 +234,7 @@ if (Img_name == "ISPRS1") {
     B5_6
     B5_6[5,] <- B4[173,] #correction of line
     B5_6R4 <- B5_6
+    lnr_det5 <- B5_6R4$lnr
   } #end b11
   
   
