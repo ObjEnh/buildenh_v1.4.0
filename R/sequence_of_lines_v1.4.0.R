@@ -84,13 +84,11 @@ if (Img_name == "ISPRS1" & proc_mode == "demo" |
     Img_name == "ISPRS7" & proc_mode == "demo") {
   meth <- 3
 } else {
-  meth <- readline("type number for method for determination of line-sequence: ")
+  meth <- readline("type number for method for determination of line-sequence: ") #manual input of method
   meth <- as.numeric(meth)
 }
 
-#manual input of method
-#meth <- readline("type number for method for determination of line-sequence: ")
-#meth <- as.numeric(meth)
+
 sek <- switch(meth,"Mpts","Mpts+dist","bdr_follow") 
 sek #selected method for determination of line-sequence
 
@@ -787,7 +785,7 @@ if (sek == "bdr_follow") {
   answ
   bnr2
   
-  if (answ == "N" && proc_mode == "obj_wise" && part == "no_part" || 
+  if (answ == "N" && proc_mode == "obj_wise" && part == "no_part" | 
       answ == "N" && proc_mode == "demo" && part == "no_part") {
       p_pos <- "cor_pos" #correction of position
       setwd(home_dir2)
@@ -1132,5 +1130,6 @@ cat("end of 'sequence of lines.R' - continue with 'adjustment_of_line.R' ","\n")
 cat("####################################################################","\n")
 stop("test")
 setwd(home_dir2)
+#stop("test")
 source(paste("adjustment_of_line_v",v_nr,".R",sep=""))
 
