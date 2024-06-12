@@ -527,7 +527,7 @@ if (cas == "100_all+nonortho") {
     
   } #end if n_nonortholines = 3 
   
-} #end if cas == "100_all+nonortho" 
+} #end cas = "100_all+nonortho" 
 
 cat("end of program 'intersect_corner_points.R' - continue with program 'adjustment_of_corner_coordinates.R'","\n")
 setwd(home_dir2)
