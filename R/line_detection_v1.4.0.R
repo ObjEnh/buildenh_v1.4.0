@@ -1598,7 +1598,7 @@ if (cas == "100_all+nonortho") { #solution for lines parallel to ref line
     
     #loop for plotting approximate lines
     for (n1 in vec3) {
-      browser()
+      #browser()
       cat("PC_nr=", B5_6$lnr[n1], "\n")
       theta_angle <- B5_6$theta_angle[n1]
       theta_math <- (180 - theta_angle) #theta of oriented line
