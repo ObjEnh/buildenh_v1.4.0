@@ -12,7 +12,7 @@ cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""
 #instructions: change directories for input 
 #instructions: input project title 
 #instructions: save your home directory
-#instructions: select orthoimage 
+#instructions: select orthoimage (line #66)
 #instructions: select the OrgClassResFilename,OrgImgPathname,OrgImgFilename,OrgGtsPathname,OrgGtsFilename   
 #instructions: type 'Ctrl+A'(select all) and 'Source'
 #instructions: display all 4 panes
