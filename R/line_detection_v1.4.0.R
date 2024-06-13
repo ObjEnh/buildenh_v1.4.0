@@ -1640,7 +1640,7 @@ if (cas == "100_all+nonortho") { #solution for lines parallel to ref line
         p_pos <- "cor_det"
         setwd(home_dir2)
         source(paste("./spObj/spObj_line_detection_v",v_nr,".R",sep = ""))
-        lnr_det5 #<- B5_6R4$lnr
+        lnr_det5 
     } #end if
     
   } #end if (all proc_modes)
