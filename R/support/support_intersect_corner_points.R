@@ -1,6 +1,6 @@
 ## name of script: support_intersect_corner_points.R
 cat("version_number= ",v_nr,"\n")
-## purpose: supporting software for script "intersect_corner_points.R"
+## purpose: generation of theta average, intersection of two lines
 ##instruction: process first using mode 'demo'
 ##author: Joachim Höhle
 ##GNU General Public License (GPL)
