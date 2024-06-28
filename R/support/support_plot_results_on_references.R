@@ -1,6 +1,6 @@
 ##name of script: support_plot_results_on_references.R
 cat("version_number= ",v_nr,"\n")
-##purpose: supporting software for program "plot_results_on_references.R"
+##purpose: plotting of results
 ##instruction: run all scripts in "demo"-mode before using supporting scripts
 #author: Joachim Höhle
 ##GNU General Public License (GPL)
@@ -14,6 +14,7 @@ cat("version_number= ",v_nr,"\n")
 # 5.plot of all processed buildings onto graph, orthoimage and GT
 # 6.plot of a selected corner onto orthoimage (small scale) 
 # 7.measurement of unmarked check point in zoomed orthoimage
+# 8.measurement of check points in zoomed reference map
 
 ################################################################################
 
@@ -409,7 +410,26 @@ display(img_ref, method = "browser")
 #instruction: zoom-in to 200%
 #read coordinates (row, column) of unmarked corner point
 
-#end of #7: measurement of unmarked check point in zoomed orthoimage
+#end of #7: measurement of unmarked check point onto enlarged orthoimage
+################################################################################
+
+### 8.measurement of check points in zoomed reference map & output of map
+setwd(OrgGtsPathname)
+map_ref <- readImage(OrgGtsFilename)
+display(map_ref, method = "browser")
+
+#instruction: zoom-in to 200%
+#read coordinates (row, column) of unmarked corner point
+
+###9: generation of second extract
+display(map_ref, method = "raster")
+map_ref_extr2 <- map_ref[1:480,1:500,]
+display(map_ref_extr2, method = "raster")
+display(map_ref_extr2,method = "browser")
+f="C:/Users/Joachim/R_programs/tests/LVA_Halle/data/DTK10/4130NW_col_extr2.tif"
+writeImage(map_ref_extr2,file=f)
+
+#end of script #8: measurement of check points in zoomed reference map
 ################################################################################
 
 ##end of supplementing software to script 'plot_results_on_references.R'
