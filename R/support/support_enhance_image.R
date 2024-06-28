@@ -1,6 +1,7 @@
 ## name of script: support_enhance_image.R
 cat("version_number= ",v_nr,"\n")
-## supporting software for program "enhance_image.R"
+## purpose: scaling of ortho-images
+## required for images "ISPRS1" and "ISPRS7" (examples for learning)
 ## author: Joachim Höhle
 ## instruction: run all programs in "demo" mode before using 'support_enhance_image.R'
 ## GNU General Public License (GPL)
@@ -145,7 +146,7 @@ y_lower_side <- co_xy$y[4] #lower side
 LCM_b_netto <- LCM_b[x_left_side:x_right_side,y_upper_side:y_lower_side] #cutout net-image #1
 display(LCM_b_netto)
 
-#end #3: cutting-out of net-image
+#end of script #3: cutting-out of net-image
 
 ###############################################################################################
 
@@ -226,7 +227,7 @@ LCM_b_2 <- EBImage::affine(LCM_b_netto,m1,filter='bilinear',output.dim=c(1919,25
 display(LCM_b_2) #display on browser
 #
 
-#end #4: affine scaling with manual measurement in browser
+#end of script #4: affine scaling with manual measurement in browser
 ##########################################################################################################
 
 ## 5. affine transformation without measuring
@@ -269,7 +270,7 @@ setwd(home_dir)
 writeImage(LCM_b_2,"./data/ISPRS1/images/LCM_cart_enh_b3_scaled_2.jpg") #scaled affine
 #end ISPRS1
 
-#end of #5: affine transformation without measuring
+#end of script #5: affine transformation without measuring
 ################################################################################
 
 ##end of script 'support_enhance_image.R'
