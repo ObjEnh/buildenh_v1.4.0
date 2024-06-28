@@ -1,6 +1,6 @@
 ## name of script: support_adjustment_of_line.R
 cat("version_number= ",v_nr,"\n")
-## purpose: supporting software for special objects
+## purpose: adjustment for one line or several lines
 ## author: Joachim Höhle
 ## GNU General Public License (GPL)
 ## contents:
