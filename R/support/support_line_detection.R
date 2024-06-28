@@ -1,5 +1,5 @@
 ## name of script: support_line_detection.R
-##purpose: supporting software for special cases
+##purpose: detection of lines for special cases
 ##ISPRS data (areas #1,#7), DT classification, training by ISPRS orthoimage #26
 ##instruction: please activate function 'locator' where it is needed
 ##author: Joachim Höhle
@@ -705,7 +705,7 @@ if (is.finite(a)) {
   lines(c(ro_l3,ro_l3),c(0, (wind_y-orig_y)),col="red")
 } #end if-else
 
-#end script #10
+#end of script #10
 #############################################################################################################
 
 
