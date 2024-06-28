@@ -1,6 +1,6 @@
 ## name of script: support_adjustment_of_corner_coordinates.R
 cat("version_number= ",v_nr,"\n")
-## purpose: supporting of scripts and functions for very special objects
+## purpose: plot of the final outline of a single object in small scale
 ## instruction: use processing mode "demo" in a complete run before applying this script
 ## author: Joachim Höhle
 ## GNU General Public License (GPL)
