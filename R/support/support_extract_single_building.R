@@ -49,7 +49,7 @@ for (i in y1) {
   text(xc,yc,nr,cex=1.2,col="red")
 } #end for loop
 
-#end of script #1: plot numbers (labels) of buildings (before and after applying a threshold) 
+#end of #1: plot numbers (labels) of buildings (before and after applying a threshold) 
 
 ################################################################################
 
@@ -66,7 +66,7 @@ yc <- shap2_A_red3[i,9]
 text(xc,yc,i,cex=1.2,col="red")
 #
 
-#end of script #2: plot the number of one object (building) 
+#end of #2: plot the number of one object (building) 
 ###############################################################################################################
 
 #3: find number 'bnr2' by number 'bnr' and vice versa
@@ -84,7 +84,7 @@ for (n in y1) {
   
 } #end for-loop
 
-#end of script #3: find number 'bnr2' by number 'bnr' and vice versa
+#end of #3: find number 'bnr2' by number 'bnr' and vice versa
 ##############################################################################################################
 
 #4: generation of table with bnr/bnr2 columns
@@ -113,7 +113,7 @@ for (i in y1) {
 obj_nrs #table bnr/bnr2
 #
 
-#end of script #4: generation of table with bnr/bnr2 columns
+#end of #4: generation of table with bnr/bnr2 columns
 ###############################################################################
 
 #5: find bnr2 by bnr and vice versa using the table derived in #4.
@@ -150,7 +150,7 @@ for (i in y1) {
 cat("bnr= ", bnr,"\n")
 #
 
-#end of script #5: find bnr2 by bnr and vice versa using a table
+#end of #5: find bnr2 by bnr and vice versa using a table
 #########################################################################################################
 
 ##end of script 'support_extract_single_building.R'
