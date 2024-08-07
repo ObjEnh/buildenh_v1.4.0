@@ -29,10 +29,6 @@ cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""
 old_dir <- setwd("./")
 getwd()
 #
-#home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3"
-#home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3/R"
-#home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3"
-#home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3/R"
 home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0_new2/buildenh_v1.4.1"
 home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0_new2/buildenh_v1.4.1/R"
 ##################################################################################################
