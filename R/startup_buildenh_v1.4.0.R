@@ -1,5 +1,5 @@
 cat("start of software package 'buildenh_jh' ","\n")
-v_nr = "1.4.0" #version number of the program package
+v_nr = "1.4.1" #version number of the program package
 cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""),"\n")
 #description: program(script) starts the package 'buildenh'
 #examples: extracted buildings from land cover maps derived by classification programs
