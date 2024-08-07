@@ -15,12 +15,12 @@ cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""
 #instructions: select orthoimage (line #66)
 #instructions: select the OrgClassResFilename,OrgImgPathname,OrgImgFilename,OrgGtsPathname,OrgGtsFilename   
 #instructions: type 'Ctrl+A'(select all) and 'Source'
-#instructions: display all 4 panes (e.g. RStudio)
+#instructions: display all 4 panes in your editor, e.g. RStudio
 #instructions: new users may start by examples (processing mode = demo)
-#instructions: The parameters (bnr, p_m_md, part, ro_rg, ref_l, cas, n_pix, c_ld, sek, c_pos, c_sek, 
-#c_adj_l) must be selected. The used parameters in the example can be found in a table stored at './data'.
-#instructions: find supporting software at './R/support'
-#depends: R 4.4.0; BiocManager 1.78.0-0 (EBImage); spatstat 2.3-4; tiff 01-11; rpart 4.1.19; nlme 3.1-162;
+#instructions: The parameters (bnr, p_m_md, part, ro_rg, ref_l, cas, n_pix, c_ld, sek, c_pos, c_sek) 
+#instructions: must be selected. The used parameters in the example can be found in a table stored at './data'.
+#instructions: find supporting software at './R/support/'
+#depends on: R 4.4.0; BiocManager 1.78.0-0 (EBImage); spatstat 2.3-4; tiff 01-11; rpart 4.1.19; nlme 3.1-162;
 #Copyright(C) 2022 Joachim Höhle
 #GNU General Public License (GPL)
 
@@ -33,9 +33,9 @@ getwd()
 #home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.3/buildenh_v1.3/R"
 #home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3"
 #home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/clone8_1.3/buildenh_v1.3/R"
-home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0"
-home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0/R"
-###################################################################################
+home_dir <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0_new2/buildenh_v1.4.1"
+home_dir2 <- "C:/Users/Joachim/R_programs/buildenh_jh/v1.4/buildenh_v1.4.0_new2/buildenh_v1.4.1/R"
+##################################################################################################
 ## title of project (manual input of characteristics)
 prj_title <- "ISPRS1_LCM2" #example#2
 #orthoimage ISPRS1 
