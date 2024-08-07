@@ -16,6 +16,7 @@ cat("name of first program/script:",paste("startup_buildenh_v",v_nr,".R", sep=""
 #instructions: select the OrgClassResFilename,OrgImgPathname,OrgImgFilename,OrgGtsPathname,OrgGtsFilename   
 #instructions: type 'Ctrl+A'(select all) and 'Source'
 #instructions: display all 4 panes (e.g. RStudio)
+#instructions: display all 4 panes in your Editor
 #instructions: new users may start by examples (processing mode = demo)
 #instructions: The parameters (bnr, p_m_md, part, ro_rg, ref_l, cas, n_pix, c_ld, sek, c_pos, c_sek, 
 #c_adj_l) must be selected. The used parameters in the example can be found in a table stored at './data'.
