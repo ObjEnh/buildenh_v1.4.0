@@ -2,7 +2,7 @@
 cat("version_number= ",v_nr,"\n")
 #description: extraction of one building  
 #from image "building"-theme of generated land cover map
-#orthoimage: ISPRS data "Vaihingen" of areas: #1, #7, (#26)
+#orthoimage: ISPRS data "Vaihingen" of areas: #1, #7 with (#26),
 #instruction: use plot of building numbers 
 #producible in 'support_extract_single_building'
 #support script to be used for selecting of object 
@@ -17,19 +17,19 @@ setwd(home_dir)
 cat("select mode of processing? - demo: 1, obj_wise: 2, auto: 3","\n") 
 answ <- readline("mode of processing? - type 1, 2, or 3: ") #processing mode
 
-if (answ == "1" && Img_name == "ISPRS7") { #processing of one example
-  proc_mode <- "demo" #object b18 (ISPRS7)
-  bnr2 <- 18
-  part = "no_part"
-  k_part = "0"
-} 
-
 if (answ == "1" && Img_name == "ISPRS1") { #processing of one example
   proc_mode <- "demo" 
   bnr2 <- 11
   part = "no_part"
   k_part = "0"
 }
+
+if (answ == "1" && Img_name == "ISPRS7") { #processing of one example
+  proc_mode <- "demo" #object b18 (ISPRS7)
+  bnr2 <- 18
+  part = "no_part"
+  k_part = "0"
+} 
 
 if (answ == "2") { 
   proc_mode <- "obj_wise" #object-wise processing
@@ -73,21 +73,21 @@ if (part == "no_part") {
 
 cat("label of building to be extracted=", bnr2,"\n") #check if new number is necessary
 
-##input of enhanced billede
+##input of enhanced image
 setwd(home_dir)
 LCM_enh_b=readImage(paste("./data/",Img_name,"/images/LCM_cart_enh_b3_scaled_2.jpg",sep = "")) #classification by method JH, scaled affine
 display(LCM_enh_b, method="browser") #use for checking of image
 #display(LCM_enh_b, method="raster") #optional
 
 ##enhancement of raster image
-LCM_enh_b_t <- thresh(LCM_enh_b,2,2,0.01) #thresholding -> white outlines
+LCM_enh_b_t <- thresh(LCM_enh_b,2,2,0.01) #apply threshold -> white outlines
 display(LCM_enh_b_t, method="raster")
 LCM_enh_b_t_f <- fillHull(LCM_enh_b_t)
 display(LCM_enh_b_t_f,"raster")
 LCM_label_A <- bwlabel(LCM_enh_b_t_f) #labeling for area
 cat('number of buildings=', max(LCM_label_A),'\n')
 display(LCM_label_A, method="raster")
-LCM_enh_b_t_f_t2 <- thresh(LCM_enh_b_t_f, 2,2,0.01) #threshholding
+LCM_enh_b_t_f_t2 <- thresh(LCM_enh_b_t_f, 2,2,0.01) #apply threshold
 display(LCM_enh_b_t_f_t2, method="raster")
 LCM_label <- bwlabel(LCM_enh_b_t_f_t2) #labeling for perimeter
 display(LCM_label)
@@ -300,7 +300,7 @@ write.table(idxy, fname2,  sep= " ", row.names=T) ##output of pixel cluster for 
 cat("end of program 'extract_single_building.R' ","\n") 
 cat("continue with 'line_detection.R' ","\n")
 setwd(home_dir2)
-#stop("test")
+#stop("stop")
 source(paste("line_detection_v",v_nr,".R", sep=""))
 ###################################################################################
 
