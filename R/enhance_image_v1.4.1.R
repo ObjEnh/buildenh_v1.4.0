@@ -2,7 +2,7 @@
 cat("version_number= ",v_nr,"\n")
 #description: cartographic enhancement of extracted class "building"
 #author: Joachim Höhle
-#instructions: scale of image has to be checked and eventually to be corrected
+#instructions: scale of image has to be checked and eventually be corrected
 #GNU General Public License (GPL)
 ##############################################################################
 
@@ -92,7 +92,7 @@ display(LCM_b_2)
 
 cat("end of 'enhance_image.R' - continue with 'extract_single_building.R' ","\n")
 setwd(home_dir2)
-#stop("test")
+#stop("stop")
 source(paste("extract_single_building_v",v_nr,".R",sep=""))
 #end of 'enhance_image'
 #########################################################################################
